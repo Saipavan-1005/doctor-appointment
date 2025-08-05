@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ophthalmology Department - MediCare Hospital</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="department.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="script2.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>MediCare</span>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#services" class="nav-link">Services</a></li>
+                    <li><a href="index.html#doctors" class="nav-link">Doctors</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="book-btn" onclick="openBookingModal()">Book Appointment</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Department Hero -->
+    <section class="dept-hero ophthalmology-hero">
+        <div class="container">
+            <div class="dept-hero-content">
+                <div class="dept-info">
+                    <h1><i class="fas fa-eye"></i> Ophthalmology Department</h1>
+                    <p>Our Ophthalmology Department provides comprehensive eye care services with advanced diagnostic equipment and treatment methods. We specialize in treating all eye conditions from routine check-ups to complex surgeries.</p>
+                    <div class="dept-stats">
+                        <div class="stat-item">
+                            <h3>6000+</h3>
+                            <p>Eye Surgeries</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>99%</h3>
+                            <p>Success Rate</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>Latest</h3>
+                            <p>Technology</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Offered -->
+    <section class="dept-services">
+        <div class="container">
+            <h2>Eye Care Services</h2>
+            <div class="services-list">
+                <div class="service-item">
+                    <i class="fas fa-eye"></i>
+                    <div>
+                        <h3>Cataract Surgery</h3>
+                        <p>Advanced phacoemulsification and intraocular lens implantation</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-eye-dropper"></i>
+                    <div>
+                        <h3>Glaucoma Treatment</h3>
+                        <p>Comprehensive glaucoma management and laser treatments</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-glasses"></i>
+                    <div>
+                        <h3>Refractive Surgery</h3>
+                        <p>LASIK and PRK procedures for vision correction</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-search"></i>
+                    <div>
+                        <h3>Retinal Disorders</h3>
+                        <p>Treatment of macular degeneration and diabetic retinopathy</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-eye-slash"></i>
+                    <div>
+                        <h3>Corneal Transplant</h3>
+                        <p>Advanced corneal replacement and keratoplasty procedures</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-child"></i>
+                    <div>
+                        <h3>Pediatric Ophthalmology</h3>
+                        <p>Specialized eye care for children and adolescents</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Department Doctors -->
+    <section class="dept-doctors">
+        <div class="container">
+            <h2>Our Eye Care Specialists</h2>
+            <div class="doctors-grid">
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <div class="placeholder-img">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                    </div>
+                    <h3>Dr. Susan Taylor</h3>
+                    <p class="specialty">Chief Ophthalmologist</p>
+                    <p class="experience">17+ Years Experience</p>
+                    <p>MD from Columbia University. Expert in cataract surgery and glaucoma treatment.</p>
+                    <div class="doctor-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>4.9</span>
+                    </div>
+                    <button class="book-doctor-btn" onclick="openBookingModal('ophthalmology', 'Dr. Susan Taylor')">Book Appointment</button>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <div class="placeholder-img">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                    </div>
+                    <h3>Dr. Ahmad Hassan</h3>
+                    <p class="specialty">Retinal Specialist</p>
+                    <p class="experience">12+ Years Experience</p>
+                    <p>MD from Washington University. Expert in retinal disorders and macular degeneration.</p>
+                    <div class="doctor-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                    </div>
+                    <button class="book-doctor-btn" onclick="openBookingModal('ophthalmology', 'Dr. Ahmad Hassan')">Book Appointment</button>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <div class="placeholder-img">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                    </div>
+                    <h3>Dr. Rachel Green</h3>
+                    <p class="specialty">Corneal Specialist</p>
+                    <p class="experience">8+ Years Experience</p>
+                    <p>MD from Emory University. Expert in corneal transplant and dry eye treatment.</p>
+                    <div class="doctor-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>4.9</span>
+                    </div>
+                    <button class="book-doctor-btn" onclick="openBookingModal('ophthalmology', 'Dr. Rachel Green')">Book Appointment</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment & Technology -->
+    <section class="dept-equipment">
+        <div class="container">
+            <h2>Advanced Eye Care Equipment</h2>
+            <div class="equipment-grid">
+                <div class="equipment-item">
+                    <i class="fas fa-microscope"></i>
+                    <h3>Surgical Microscopes</h3>
+                    <p>High-precision microscopes for delicate eye surgeries</p>
+                </div>
+                <div class="equipment-item">
+                    <i class="fas fa-laser"></i>
+                    <h3>Excimer Laser</h3>
+                    <p>Advanced laser technology for LASIK and PRK procedures</p>
+                </div>
+                <div class="equipment-item">
+                    <i class="fas fa-camera"></i>
+                    <h3>OCT Imaging</h3>
+                    <p>Optical coherence tomography for detailed retinal imaging</p>
+                </div>
+                <div class="equipment-item">
+                    <i class="fas fa-eye"></i>
+                    <h3>Fundus Camera</h3>
+                    <p>Digital retinal photography for comprehensive eye exams</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Include Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Book Ophthalmology Appointment</h2>
+                <span class="close" onclick="closeBookingModal()">&times;</span>
+            </div>
+            <form id="bookingForm" class="booking-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="patientName">Full Name *</label>
+                        <input type="text" id="patientName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="patientEmail">Email *</label>
+                        <input type="email" id="patientEmail" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="patientPhone">Phone Number *</label>
+                        <input type="tel" id="patientPhone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="patientAge">Age *</label>
+                        <input type="number" id="patientAge" min="1" max="120" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="department">Department *</label>
+                        <select id="department" required>
+                            <option value="ophthalmology" selected>Ophthalmology</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="doctor">Preferred Doctor *</label>
+                        <select id="doctor" required>
+                            <option value="">Select Doctor</option>
+                            <option value="Dr. Susan Taylor">Dr. Susan Taylor - Chief Ophthalmologist</option>
+                            <option value="Dr. Ahmad Hassan">Dr. Ahmad Hassan - Retinal Specialist</option>
+                            <option value="Dr. Rachel Green">Dr. Rachel Green - Corneal Specialist</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="appointmentDate">Preferred Date *</label>
+                        <input type="date" id="appointmentDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointmentTime">Preferred Time *</label>
+                        <select id="appointmentTime" required>
+                            <option value="">Select Time</option>
+                            <option value="09:00">09:00 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="14:00">02:00 PM</option>
+                            <option value="15:00">03:00 PM</option>
+                            <option value="16:00">04:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="symptoms">Symptoms/Reason for Visit</label>
+                    <textarea id="symptoms" placeholder="Please describe your symptoms or reason for the appointment"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" onclick="closeBookingModal()">Cancel</button>
+                    <button type="submit" class="btn-primary">Book Appointment</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content success-modal">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Appointment Booked Successfully!</h2>
+            <p>Your ophthalmology appointment has been scheduled. You will receive a confirmation email shortly.</p>
+            <div id="appointmentDetails"></div>
+            <button class="btn-primary" onclick="closeSuccessModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>MediCare</span>
+                    </div>
+                    <p>Providing exceptional healthcare services with compassion and excellence.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#doctors">Doctors</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MediCare Hospital. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

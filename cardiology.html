@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardiology Department - MediCare Hospital</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="department.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>MediCare</span>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#services" class="nav-link">Services</a></li>
+                    <li><a href="index.html#doctors" class="nav-link">Doctors</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="book-btn" onclick="openBookingModal()">Book Appointment</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Department Hero -->
+    <section class="dept-hero">
+        <div class="container">
+            <div class="dept-hero-content">
+                <div class="dept-info">
+                    <h1><i class="fas fa-heartbeat"></i> Cardiology Department</h1>
+                    <p>Our Cardiology Department offers comprehensive heart care with state-of-the-art technology and experienced cardiologists. We provide diagnosis, treatment, and prevention of cardiovascular diseases.</p>
+                    <div class="dept-stats">
+                        <div class="stat-item">
+                            <h3>5000+</h3>
+                            <p>Procedures Done</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>98%</h3>
+                            <p>Success Rate</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>24/7</h3>
+                            <p>Emergency Care</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Offered -->
+    <section class="dept-services">
+        <div class="container">
+            <h2>Services We Offer</h2>
+            <div class="services-list">
+                <div class="service-item">
+                    <i class="fas fa-stethoscope"></i>
+                    <div>
+                        <h3>Cardiac Consultation</h3>
+                        <p>Comprehensive heart evaluation and diagnosis</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-heart"></i>
+                    <div>
+                        <h3>Angioplasty</h3>
+                        <p>Minimally invasive procedure to open blocked arteries</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-heartbeat"></i>
+                    <div>
+                        <h3>Bypass Surgery</h3>
+                        <p>Advanced surgical treatment for blocked coronary arteries</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-chart-line"></i>
+                    <div>
+                        <h3>ECG & Echo</h3>
+                        <p>Advanced cardiac imaging and monitoring</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-laptop-medical"></i>
+                    <div>
+                        <h3>Pacemaker Implantation</h3>
+                        <p>Advanced device therapy for heart rhythm disorders</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-user-md"></i>
+                    <div>
+                        <h3>Preventive Cardiology</h3>
+                        <p>Heart disease prevention and lifestyle counseling</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Department Doctors -->
+    <section class="dept-doctors">
+        <div class="container">
+            <h2>Our Cardiology Specialists</h2>
+            <div class="doctors-grid">
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <div class="placeholder-img">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                    </div>
+                    <h3>Dr. Sarah Johnson</h3>
+                    <p class="specialty">Chief Cardiologist</p>
+                    <p class="experience">15+ Years Experience</p>
+                    <p>MD from Harvard Medical School. Specialist in interventional cardiology and heart surgery.</p>
+                    <div class="doctor-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>4.9</span>
+                    </div>
+                    <button class="book-doctor-btn" onclick="openBookingModal('cardiology', 'Dr. Sarah Johnson')">Book Appointment</button>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <div class="placeholder-img">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                    </div>
+                    <h3>Dr. Robert Kim</h3>
+                    <p class="specialty">Cardiac Surgeon</p>
+                    <p class="experience">12+ Years Experience</p>
+                    <p>MD from Johns Hopkins. Expert in bypass surgery and valve replacement procedures.</p>
+                    <div class="doctor-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                    </div>
+                    <button class="book-doctor-btn" onclick="openBookingModal('cardiology', 'Dr. Robert Kim')">Book Appointment</button>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <div class="placeholder-img">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                    </div>
+                    <h3>Dr. Maria Santos</h3>
+                    <p class="specialty">Interventional Cardiologist</p>
+                    <p class="experience">10+ Years Experience</p>
+                    <p>MD from Mayo Clinic. Specialist in angioplasty and stent placement procedures.</p>
+                    <div class="doctor-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>4.9</span>
+                    </div>
+                    <button class="book-doctor-btn" onclick="openBookingModal('cardiology', 'Dr. Maria Santos')">Book Appointment</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment & Technology -->
+    <section class="dept-equipment">
+        <div class="container">
+            <h2>Advanced Equipment & Technology</h2>
+            <div class="equipment-grid">
+                <div class="equipment-item">
+                    <i class="fas fa-x-ray"></i>
+                    <h3>Cardiac Catheterization Lab</h3>
+                    <p>State-of-the-art facility for diagnostic and interventional procedures</p>
+                </div>
+                <div class="equipment-item">
+                    <i class="fas fa-heart"></i>
+                    <h3>3D Echocardiography</h3>
+                    <p>Advanced imaging technology for detailed heart assessment</p>
+                </div>
+                <div class="equipment-item">
+                    <i class="fas fa-monitor-heart-rate"></i>
+                    <h3>Holter Monitoring</h3>
+                    <p>24-hour continuous heart rhythm monitoring system</p>
+                </div>
+                <div class="equipment-item">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>Stress Testing</h3>
+                    <p>Exercise and pharmacological stress testing equipment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Include Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Book Cardiology Appointment</h2>
+                <span class="close" onclick="closeBookingModal()">&times;</span>
+            </div>
+            <form id="bookingForm" class="booking-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="patientName">Full Name *</label>
+                        <input type="text" id="patientName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="patientEmail">Email *</label>
+                        <input type="email" id="patientEmail" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="patientPhone">Phone Number *</label>
+                        <input type="tel" id="patientPhone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="patientAge">Age *</label>
+                        <input type="number" id="patientAge" min="1" max="120" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="department">Department *</label>
+                        <select id="department" required>
+                            <option value="cardiology" selected>Cardiology</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="doctor">Preferred Doctor *</label>
+                        <select id="doctor" required>
+                            <option value="">Select Doctor</option>
+                            <option value="Dr. Sarah Johnson">Dr. Sarah Johnson - Chief Cardiologist</option>
+                            <option value="Dr. Robert Kim">Dr. Robert Kim - Cardiac Surgeon</option>
+                            <option value="Dr. Maria Santos">Dr. Maria Santos - Interventional Cardiologist</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="appointmentDate">Preferred Date *</label>
+                        <input type="date" id="appointmentDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointmentTime">Preferred Time *</label>
+                        <select id="appointmentTime" required>
+                            <option value="">Select Time</option>
+                            <option value="09:00">09:00 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="14:00">02:00 PM</option>
+                            <option value="15:00">03:00 PM</option>
+                            <option value="16:00">04:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="symptoms">Symptoms/Reason for Visit</label>
+                    <textarea id="symptoms" placeholder="Please describe your symptoms or reason for the appointment"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" onclick="closeBookingModal()">Cancel</button>
+                    <button type="submit" class="btn-primary">Book Appointment</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content success-modal">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Appointment Booked Successfully!</h2>
+            <p>Your cardiology appointment has been scheduled. You will receive a confirmation email shortly.</p>
+            <div id="appointmentDetails"></div>
+            <button class="btn-primary" onclick="closeSuccessModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>MediCare</span>
+                    </div>
+                    <p>Providing exceptional healthcare services with compassion and excellence.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#doctors">Doctors</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MediCare Hospital. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

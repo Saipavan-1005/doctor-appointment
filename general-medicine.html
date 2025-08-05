@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Medicine Department - MediCare Hospital</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="department.css">
+    <script src="script2.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>MediCare</span>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#services" class="nav-link">Services</a></li>
+                    <li><a href="index.html#doctors" class="nav-link">Doctors</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="book-btn" onclick="openBookingModal()">Book Appointment</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Department Hero -->
+    <section class="dept-hero general-hero">
+        <div class="container">
+            <div class="dept-hero-content">
+                <div class="dept-info">
+                    <h1><i class="fas fa-stethoscope"></i> General Medicine Department</h1>
+                    <p>Our General Medicine Department provides comprehensive primary healthcare services for adults. We focus on preventive care, diagnosis, and treatment of common medical conditions with experienced physicians and modern facilities.</p>
+                    <div class="dept-stats">
+                        <div class="stat-item">
+                            <h3>12000+</h3>
+                            <p>Patients Served</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>96%</h3>
+                            <p>Patient Satisfaction</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>24/7</h3>
+                            <p>Primary Care</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Offered -->
+    <section class="dept-services">
+        <div class="container">
+            <h2>General Medicine Services</h2>
+            <div class="services-list">
+                <div class="service-item">
+                    <i class="fas fa-user-md"></i>
+                    <div>
+                        <h3>Primary Care</h3>
+                        <p>Comprehensive primary healthcare and routine medical examinations</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <div>
+                        <h3>Preventive Medicine</h3>
+                        <p>Health screenings, vaccinations, and preventive care programs</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-pills"></i>
+                    <div>
+                        <h3>Chronic Disease Management</h3>
+                        <p>Treatment and management of diabetes, hypertension, and other chronic conditions</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-thermometer"></i>
+                    <div>
+                        <h3>Acute Care</h3>
+                        <p>Treatment of fever, infections, and other acute medical conditions</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-chart-line"></i>
+                    <div>
+                        <h3>Health Checkups</h3>
+                        <p>Annual physical exams and comprehensive health assessments</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-comments"></i>
+                    <div>
+                        <h3>Health Counseling</h3>
+                        <p>Lifestyle advice and health education programs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Department Doctors -->
+    <section class="dept-doctors">
+        <div class="container">
+            <h2>Our General Medicine Specialists</h2>
+            <div class="doctors-grid">
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <div class="placeholder-img">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                    </div>
+                    <h3>Dr. Thomas Anderson</h3>
+                    <p class="specialty">Chief General Practitioner</p>
+                    <p class="experience">20+ Years Experience</p>
+                    <p>MD from University of Michigan. Expert in primary care and preventive medicine.</p>
+                    <div class="doctor-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                    </div>
+                    <button class="book-doctor-btn" onclick="openBookingModal('general', 'Dr. Thomas Anderson')">Book Appointment</button>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <div class="placeholder-img">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                    </div>
+                    <h3>Dr. Laura Thompson</h3>
+                    <p class="specialty">Family Medicine Physician</p>
+                    <p class="experience">15+ Years Experience</p>
+                    <p>MD from University of Wisconsin. Expert in family health and chronic disease management.</p>
+                    <div class="doctor-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>4.9</span>
+                    </div>
+                    <button class="book-doctor-btn" onclick="openBookingModal('general', 'Dr. Laura Thompson')">Book Appointment</button>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <div class="placeholder-img">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                    </div>
+                    <h3>Dr. Richard Clark</h3>
+                    <p class="specialty">Internal Medicine Specialist</p>
+                    <p class="experience">18+ Years Experience</p>
+                    <p>MD from Yale Medical School. Expert in adult medicine and diabetes management.</p>
+                    <div class="doctor-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                    </div>
+                    <button class="book-doctor-btn" onclick="openBookingModal('general', 'Dr. Richard Clark')">Book Appointment</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment & Technology -->
+    <section class="dept-equipment">
+        <div class="container">
+            <h2>Modern Medical Facilities</h2>
+            <div class="equipment-grid">
+                <div class="equipment-item">
+                    <i class="fas fa-microscope"></i>
+                    <h3>Diagnostic Lab</h3>
+                    <p>Complete laboratory services for blood tests and diagnostic screenings</p>
+                </div>
+                <div class="equipment-item">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>ECG & Monitoring</h3>
+                    <p>Cardiac monitoring and electrocardiogram services</p>
+                </div>
+                <div class="equipment-item">
+                    <i class="fas fa-x-ray"></i>
+                    <h3>Digital Imaging</h3>
+                    <p>X-ray and ultrasound imaging for accurate diagnosis</p>
+                </div>
+                <div class="equipment-item">
+                    <i class="fas fa-laptop-medical"></i>
+                    <h3>Electronic Health Records</h3>
+                    <p>Digital patient records for comprehensive care coordination</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Include Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Book General Medicine Appointment</h2>
+                <span class="close" onclick="closeBookingModal()">&times;</span>
+            </div>
+            <form id="bookingForm" class="booking-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="patientName">Full Name *</label>
+                        <input type="text" id="patientName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="patientEmail">Email *</label>
+                        <input type="email" id="patientEmail" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="patientPhone">Phone Number *</label>
+                        <input type="tel" id="patientPhone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="patientAge">Age *</label>
+                        <input type="number" id="patientAge" min="18" max="120" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="department">Department *</label>
+                        <select id="department" required>
+                            <option value="general" selected>General Medicine</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="doctor">Preferred Doctor *</label>
+                        <select id="doctor" required>
+                            <option value="">Select Doctor</option>
+                            <option value="Dr. Thomas Anderson">Dr. Thomas Anderson - Chief General Practitioner</option>
+                            <option value="Dr. Laura Thompson">Dr. Laura Thompson - Family Medicine Physician</option>
+                            <option value="Dr. Richard Clark">Dr. Richard Clark - Internal Medicine Specialist</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="appointmentDate">Preferred Date *</label>
+                        <input type="date" id="appointmentDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointmentTime">Preferred Time *</label>
+                        <select id="appointmentTime" required>
+                            <option value="">Select Time</option>
+                            <option value="09:00">09:00 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="14:00">02:00 PM</option>
+                            <option value="15:00">03:00 PM</option>
+                            <option value="16:00">04:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="symptoms">Symptoms/Reason for Visit</label>
+                    <textarea id="symptoms" placeholder="Please describe your symptoms or reason for the appointment"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" onclick="closeBookingModal()">Cancel</button>
+                    <button type="submit" class="btn-primary">Book Appointment</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content success-modal">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Appointment Booked Successfully!</h2>
+            <p>Your general medicine appointment has been scheduled. You will receive a confirmation email shortly.</p>
+            <div id="appointmentDetails"></div>
+            <button class="btn-primary" onclick="closeSuccessModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>MediCare</span>
+                    </div>
+                    <p>Providing exceptional healthcare services with compassion and excellence.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#doctors">Doctors</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MediCare Hospital. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

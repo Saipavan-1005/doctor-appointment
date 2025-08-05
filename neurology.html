@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neurology Department - MediCare Hospital</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="department.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="script2.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>MediCare</span>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#services" class="nav-link">Services</a></li>
+                    <li><a href="index.html#doctors" class="nav-link">Doctors</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="book-btn" onclick="openBookingModal()">Book Appointment</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Department Hero -->
+    <section class="dept-hero neurology-hero">
+        <div class="container">
+            <div class="dept-hero-content">
+                <div class="dept-info">
+                    <h1><i class="fas fa-brain"></i> Neurology Department</h1>
+                    <p>Our Neurology Department specializes in diagnosing and treating disorders of the brain, spinal cord, and nervous system. We offer comprehensive neurological care with advanced diagnostic tools and treatment methods.</p>
+                    <div class="dept-stats">
+                        <div class="stat-item">
+                            <h3>3000+</h3>
+                            <p>Patients Treated</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>95%</h3>
+                            <p>Success Rate</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>24/7</h3>
+                            <p>Stroke Care</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Offered -->
+    <section class="dept-services">
+        <div class="container">
+            <h2>Neurological Services</h2>
+            <div class="services-list">
+                <div class="service-item">
+                    <i class="fas fa-brain"></i>
+                    <div>
+                        <h3>Brain Tumor Treatment</h3>
+                        <p>Advanced surgical and non-surgical treatment for brain tumors</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-bolt"></i>
+                    <div>
+                        <h3>Epilepsy Management</h3>
+                        <p>Comprehensive epilepsy diagnosis and seizure control programs</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-head-side-virus"></i>
+                    <div>
+                        <h3>Stroke Care</h3>
+                        <p>Emergency stroke treatment and rehabilitation services</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-spine"></i>
+                    <div>
+                        <h3>Spinal Disorders</h3>
+                        <p>Treatment of spinal cord injuries and degenerative diseases</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-memory"></i>
+                    <div>
+                        <h3>Memory Disorders</h3>
+                        <p>Alzheimer's and dementia care and management</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-wave-square"></i>
+                    <div>
+                        <h3>Movement Disorders</h3>
+                        <p>Parkinson's disease and other movement disorder treatments</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Department Doctors -->
+    <section class="dept-doctors">
+        <div class="container">
+            <h2>Our Neurology Specialists</h2>
+            <div class="doctors-grid">
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <div class="placeholder-img">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                    </div>
+                    <h3>Dr. Michael Chen</h3>
+                    <p class="specialty">Chief Neurologist</p>
+                    <p class="experience">18+ Years Experience</p>
+                    <p>MD from Stanford Medical School. Expert in brain disorders and epilepsy treatment.</p>
+                    <div class="doctor-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                    </div>
+                    <button class="book-doctor-btn" onclick="openBookingModal('neurology', 'Dr. Michael Chen')">Book Appointment</button>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <div class="placeholder-img">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                    </div>
+                    <h3>Dr. Lisa Wang</h3>
+                    <p class="specialty">Neurosurgeon</p>
+                    <p class="experience">14+ Years Experience</p>
+                    <p>MD from UCLA Medical School. Specialist in brain surgery and spinal surgery.</p>
+                    <div class="doctor-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>4.9</span>
+                    </div>
+                    <button class="book-doctor-btn" onclick="openBookingModal('neurology', 'Dr. Lisa Wang')">Book Appointment</button>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <div class="placeholder-img">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                    </div>
+                    <h3>Dr. James Miller</h3>
+                    <p class="specialty">Pediatric Neurologist</p>
+                    <p class="experience">11+ Years Experience</p>
+                    <p>MD from Cleveland Clinic. Expert in childhood neurological disorders.</p>
+                    <div class="doctor-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                    </div>
+                    <button class="book-doctor-btn" onclick="openBookingModal('neurology', 'Dr. James Miller')">Book Appointment</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment & Technology -->
+    <section class="dept-equipment">
+        <div class="container">
+            <h2>Advanced Neurological Equipment</h2>
+            <div class="equipment-grid">
+                <div class="equipment-item">
+                    <i class="fas fa-brain"></i>
+                    <h3>MRI & fMRI</h3>
+                    <p>High-resolution brain imaging and functional MRI capabilities</p>
+                </div>
+                <div class="equipment-item">
+                    <i class="fas fa-wave-square"></i>
+                    <h3>EEG Monitoring</h3>
+                    <p>24-hour continuous brain wave monitoring systems</p>
+                </div>
+                <div class="equipment-item">
+                    <i class="fas fa-x-ray"></i>
+                    <h3>CT Angiography</h3>
+                    <p>Advanced imaging for blood vessel visualization</p>
+                </div>
+                <div class="equipment-item">
+                    <i class="fas fa-microscope"></i>
+                    <h3>Surgical Microscopes</h3>
+                    <p>Precision neurosurgical equipment for minimally invasive procedures</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Include Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Book Neurology Appointment</h2>
+                <span class="close" onclick="closeBookingModal()">&times;</span>
+            </div>
+            <form id="bookingForm" class="booking-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="patientName">Full Name *</label>
+                        <input type="text" id="patientName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="patientEmail">Email *</label>
+                        <input type="email" id="patientEmail" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="patientPhone">Phone Number *</label>
+                        <input type="tel" id="patientPhone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="patientAge">Age *</label>
+                        <input type="number" id="patientAge" min="1" max="120" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="department">Department *</label>
+                        <select id="department" required>
+                            <option value="neurology" selected>Neurology</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="doctor">Preferred Doctor *</label>
+                        <select id="doctor" required>
+                            <option value="">Select Doctor</option>
+                            <option value="Dr. Michael Chen">Dr. Michael Chen - Chief Neurologist</option>
+                            <option value="Dr. Lisa Wang">Dr. Lisa Wang - Neurosurgeon</option>
+                            <option value="Dr. James Miller">Dr. James Miller - Pediatric Neurologist</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="appointmentDate">Preferred Date *</label>
+                        <input type="date" id="appointmentDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointmentTime">Preferred Time *</label>
+                        <select id="appointmentTime" required>
+                            <option value="">Select Time</option>
+                            <option value="09:00">09:00 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="14:00">02:00 PM</option>
+                            <option value="15:00">03:00 PM</option>
+                            <option value="16:00">04:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="symptoms">Symptoms/Reason for Visit</label>
+                    <textarea id="symptoms" placeholder="Please describe your symptoms or reason for the appointment"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" onclick="closeBookingModal()">Cancel</button>
+                    <button type="submit" class="btn-primary">Book Appointment</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content success-modal">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Appointment Booked Successfully!</h2>
+            <p>Your neurology appointment has been scheduled. You will receive a confirmation email shortly.</p>
+            <div id="appointmentDetails"></div>
+            <button class="btn-primary" onclick="closeSuccessModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>MediCare</span>
+                    </div>
+                    <p>Providing exceptional healthcare services with compassion and excellence.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#doctors">Doctors</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MediCare Hospital. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

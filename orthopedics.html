@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orthopedics Department - MediCare Hospital</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="department.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>MediCare</span>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#services" class="nav-link">Services</a></li>
+                    <li><a href="index.html#doctors" class="nav-link">Doctors</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="book-btn" onclick="openBookingModal()">Book Appointment</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Department Hero -->
+    <section class="dept-hero orthopedics-hero">
+        <div class="container">
+            <div class="dept-hero-content">
+                <div class="dept-info">
+                    <h1><i class="fas fa-bone"></i> Orthopedics Department</h1>
+                    <p>Our Orthopedics Department provides comprehensive care for bone, joint, and musculoskeletal conditions. We offer both surgical and non-surgical treatments with state-of-the-art facilities and experienced orthopedic surgeons.</p>
+                    <div class="dept-stats">
+                        <div class="stat-item">
+                            <h3>4500+</h3>
+                            <p>Surgeries Done</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>97%</h3>
+                            <p>Success Rate</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>24/7</h3>
+                            <p>Trauma Care</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Offered -->
+    <section class="dept-services">
+        <div class="container">
+            <h2>Orthopedic Services</h2>
+            <div class="services-list">
+                <div class="service-item">
+                    <i class="fas fa-bone"></i>
+                    <div>
+                        <h3>Joint Replacement</h3>
+                        <p>Hip, knee, and shoulder replacement surgeries with advanced implants</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-running"></i>
+                    <div>
+                        <h3>Sports Medicine</h3>
+                        <p>Treatment of sports injuries and athletic performance optimization</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-spine"></i>
+                    <div>
+                        <h3>Spine Surgery</h3>
+                        <p>Advanced spinal procedures for back and neck conditions</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-hand-paper"></i>
+                    <div>
+                        <h3>Hand & Wrist Surgery</h3>
+                        <p>Specialized treatment for hand and wrist disorders</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-wheelchair"></i>
+                    <div>
+                        <h3>Trauma Surgery</h3>
+                        <p>Emergency orthopedic trauma and fracture treatment</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-dumbbell"></i>
+                    <div>
+                        <h3>Rehabilitation</h3>
+                        <p>Comprehensive physical therapy and recovery programs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Department Doctors -->
+    <section class="dept-doctors">
+        <div class="container">
+            <h2>Our Orthopedic Specialists</h2>
+            <div class="doctors-grid">
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <div class="placeholder-img">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                    </div>
+                    <h3>Dr. David Brown</h3>
+                    <p class="specialty">Chief Orthopedic Surgeon</p>
+                    <p class="experience">16+ Years Experience</p>
+                    <p>MD from University of Pennsylvania. Expert in joint replacement and trauma surgery.</p>
+                    <div class="doctor-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                    </div>
+                    <button class="book-doctor-btn" onclick="openBookingModal('orthopedics', 'Dr. David Brown')">Book Appointment</button>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <div class="placeholder-img">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                    </div>
+                    <h3>Dr. Jennifer Lee</h3>
+                    <p class="specialty">Sports Medicine Specialist</p>
+                    <p class="experience">9+ Years Experience</p>
+                    <p>MD from Duke University. Expert in sports injuries and arthroscopy.</p>
+                    <div class="doctor-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>4.9</span>
+                    </div>
+                    <button class="book-doctor-btn" onclick="openBookingModal('orthopedics', 'Dr. Jennifer Lee')">Book Appointment</button>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <div class="placeholder-img">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                    </div>
+                    <h3>Dr. Mark Davis</h3>
+                    <p class="specialty">Spine Specialist</p>
+                    <p class="experience">13+ Years Experience</p>
+                    <p>MD from University of Chicago. Expert in spinal surgery and back pain management.</p>
+                    <div class="doctor-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                    </div>
+                    <button class="book-doctor-btn" onclick="openBookingModal('orthopedics', 'Dr. Mark Davis')">Book Appointment</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment & Technology -->
+    <section class="dept-equipment">
+        <div class="container">
+            <h2>Advanced Orthopedic Equipment</h2>
+            <div class="equipment-grid">
+                <div class="equipment-item">
+                    <i class="fas fa-x-ray"></i>
+                    <h3>Digital X-Ray</h3>
+                    <p>High-resolution digital imaging for accurate diagnosis</p>
+                </div>
+                <div class="equipment-item">
+                    <i class="fas fa-microscope"></i>
+                    <h3>Arthroscopy Equipment</h3>
+                    <p>Minimally invasive surgical instruments for joint procedures</p>
+                </div>
+                <div class="equipment-item">
+                    <i class="fas fa-robot"></i>
+                    <h3>Robotic Surgery</h3>
+                    <p>Computer-assisted surgical systems for precise procedures</p>
+                </div>
+                <div class="equipment-item">
+                    <i class="fas fa-dumbbell"></i>
+                    <h3>Rehabilitation Center</h3>
+                    <p>Complete physical therapy and recovery equipment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Include Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Book Orthopedics Appointment</h2>
+                <span class="close" onclick="closeBookingModal()">&times;</span>
+            </div>
+            <form id="bookingForm" class="booking-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="patientName">Full Name *</label>
+                        <input type="text" id="patientName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="patientEmail">Email *</label>
+                        <input type="email" id="patientEmail" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="patientPhone">Phone Number *</label>
+                        <input type="tel" id="patientPhone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="patientAge">Age *</label>
+                        <input type="number" id="patientAge" min="1" max="120" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="department">Department *</label>
+                        <select id="department" required>
+                            <option value="orthopedics" selected>Orthopedics</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="doctor">Preferred Doctor *</label>
+                        <select id="doctor" required>
+                            <option value="">Select Doctor</option>
+                            <option value="Dr. David Brown">Dr. David Brown - Chief Orthopedic Surgeon</option>
+                            <option value="Dr. Jennifer Lee">Dr. Jennifer Lee - Sports Medicine Specialist</option>
+                            <option value="Dr. Mark Davis">Dr. Mark Davis - Spine Specialist</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="appointmentDate">Preferred Date *</label>
+                        <input type="date" id="appointmentDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointmentTime">Preferred Time *</label>
+                        <select id="appointmentTime" required>
+                            <option value="">Select Time</option>
+                            <option value="09:00">09:00 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="14:00">02:00 PM</option>
+                            <option value="15:00">03:00 PM</option>
+                            <option value="16:00">04:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="symptoms">Symptoms/Reason for Visit</label>
+                    <textarea id="symptoms" placeholder="Please describe your symptoms or reason for the appointment"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" onclick="closeBookingModal()">Cancel</button>
+                    <button type="submit" class="btn-primary">Book Appointment</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content success-modal">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Appointment Booked Successfully!</h2>
+            <p>Your orthopedics appointment has been scheduled. You will receive a confirmation email shortly.</p>
+            <div id="appointmentDetails"></div>
+            <button class="btn-primary" onclick="closeSuccessModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>MediCare</span>
+                    </div>
+                    <p>Providing exceptional healthcare services with compassion and excellence.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#doctors">Doctors</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MediCare Hospital. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

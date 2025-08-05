@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare Hospital - Advanced Healthcare Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-heartbeat"></i>
+                    <span>MediCare</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#services" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="cardiology.html"><i class="fas fa-heartbeat"></i> Cardiology</a></li>
+                            <li><a href="neurology.html"><i class="fas fa-brain"></i> Neurology</a></li>
+                            <li><a href="orthopedics.html"><i class="fas fa-bone"></i> Orthopedics</a></li>
+                            <li><a href="ophthalmology.html"><i class="fas fa-eye"></i> Ophthalmology</a></li>
+                            <li><a href="pediatrics.html"><i class="fas fa-child"></i> Pediatrics</a></li>
+                            <li><a href="general-medicine.html"><i class="fas fa-stethoscope"></i> General Medicine</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#doctors" class="nav-link">Doctors</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="book-btn" onclick="openBookingModal()">Book Appointment</button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Home/Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Your Health, Our Priority</h1>
+                <p>Experience world-class healthcare with our team of expert doctors and state-of-the-art facilities. We're committed to providing compassionate care for you and your family.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="openBookingModal()">Book Appointment</button>
+                    <button class="btn-secondary" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">Learn More</button>
+                </div>
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>24/7 Emergency Care</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-user-md"></i>
+                        <span>Expert Doctors</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-hospital"></i>
+                        <span>Modern Facilities</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-card card-1">
+                    <i class="fas fa-user-md"></i>
+                    <h3>500+</h3>
+                    <p>Expert Doctors</p>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fas fa-hospital"></i>
+                    <h3>24/7</h3>
+                    <p>Emergency Care</p>
+                </div>
+                <div class="floating-card card-3">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>10,000+</h3>
+                    <p>Happy Patients</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Medical Services</h2>
+            <p class="section-subtitle">Comprehensive healthcare services delivered with excellence and compassion</p>
+            <div class="services-grid">
+                <div class="service-card" onclick="navigateToPage('cardiology')">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>Cardiology</h3>
+                    <p>Advanced cardiac care with cutting-edge technology and experienced cardiologists specializing in heart health.</p>
+                    <div class="service-features">
+                        <span><i class="fas fa-check"></i> Heart Surgery</span>
+                        <span><i class="fas fa-check"></i> Angioplasty</span>
+                        <span><i class="fas fa-check"></i> ECG & Echo</span>
+                    </div>
+                    <button class="service-btn cardiology-btn">Learn More</button>
+                </div>
+                <div class="service-card" onclick="navigateToPage('neurology')">
+                    <i class="fas fa-brain"></i>
+                    <h3>Neurology</h3>
+                    <p>Comprehensive neurological treatments for brain and nervous system disorders with advanced diagnostics.</p>
+                    <div class="service-features">
+                        <span><i class="fas fa-check"></i> Brain Surgery</span>
+                        <span><i class="fas fa-check"></i> Stroke Care</span>
+                        <span><i class="fas fa-check"></i> Epilepsy Treatment</span>
+                    </div>
+                    <button class="service-btn neurology-btn">Learn More</button>
+                </div>
+                <div class="service-card" onclick="navigateToPage('orthopedics')">
+                    <i class="fas fa-bone"></i>
+                    <h3>Orthopedics</h3>
+                    <p>Expert care for bones, joints, and musculoskeletal system conditions with modern surgical techniques.</p>
+                    <div class="service-features">
+                        <span><i class="fas fa-check"></i> Joint Replacement</span>
+                        <span><i class="fas fa-check"></i> Sports Medicine</span>
+                        <span><i class="fas fa-check"></i> Spine Surgery</span>
+                    </div>
+                    <button class="service-btn orthopedics-btn">Learn More</button>
+                </div>
+                <div class="service-card" onclick="navigateToPage('ophthalmology')">
+                    <i class="fas fa-eye"></i>
+                    <h3>Ophthalmology</h3>
+                    <p>Complete eye care services with advanced diagnostic equipment and specialized treatments.</p>
+                    <div class="service-features">
+                        <span><i class="fas fa-check"></i> Cataract Surgery</span>
+                        <span><i class="fas fa-check"></i> LASIK Surgery</span>
+                        <span><i class="fas fa-check"></i> Retinal Care</span>
+                    </div>
+                    <button class="service-btn ophthalmology-btn">Learn More</button>
+                </div>
+                <div class="service-card" onclick="navigateToPage('pediatrics')">
+                    <i class="fas fa-child"></i>
+                    <h3>Pediatrics</h3>
+                    <p>Specialized healthcare services for infants, children, and adolescents in a child-friendly environment.</p>
+                    <div class="service-features">
+                        <span><i class="fas fa-check"></i> Newborn Care</span>
+                        <span><i class="fas fa-check"></i> Vaccination</span>
+                        <span><i class="fas fa-check"></i> Child Development</span>
+                    </div>
+                    <button class="service-btn pediatrics-btn">Learn More</button>
+                </div>
+                <div class="service-card" onclick="navigateToPage('general-medicine')">
+                    <i class="fas fa-stethoscope"></i>
+                    <h3>General Medicine</h3>
+                    <p>Comprehensive primary care for adults with preventive health focus and chronic disease management.</p>
+                    <div class="service-features">
+                        <span><i class="fas fa-check"></i> Health Checkups</span>
+                        <span><i class="fas fa-check"></i> Preventive Care</span>
+                        <span><i class="fas fa-check"></i> Chronic Care</span>
+                    </div>
+                    <button class="service-btn general-btn">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Services Banner -->
+    <section class="emergency-banner">
+        <div class="container">
+            <div class="emergency-content">
+                <div class="emergency-info">
+                    <i class="fas fa-ambulance"></i>
+                    <h3>24/7 Emergency Services</h3>
+                    <p>Our emergency department is equipped to handle all medical emergencies with experienced staff and advanced equipment.</p>
+                </div>
+                <div class="emergency-contact">
+                    <button class="emergency-btn" onclick="window.open('tel:+15551234567')">
+                        <i class="fas fa-phone"></i>
+                        Call Emergency: +1 (555) 123-4567
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="doctors">
+        <div class="container">
+            <h2 class="section-title">Meet Our Expert Doctors</h2>
+            <p class="section-subtitle">Our team of experienced physicians is dedicated to providing exceptional care</p>
+            <div class="doctors-grid">
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <div class="placeholder-img">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="doctor-overlay">
+                            <button class="view-profile-btn">View Profile</button>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Sarah Johnson</h3>
+                        <p class="specialty">Chief Cardiologist</p>
+                        <p class="experience">15+ years experience</p>
+                        <p class="education">MD from Harvard Medical School</p>
+                        <p>Specialist in interventional cardiology and heart surgery with over 5,000 successful procedures.</p>
+                        <div class="doctor-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text">4.9 (120 reviews)</span>
+                        </div>
+                        <button class="book-doctor-btn" onclick="openBookingModal('cardiology', 'Dr. Sarah Johnson')">Book Appointment</button>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <div class="placeholder-img">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="doctor-overlay">
+                            <button class="view-profile-btn">View Profile</button>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Michael Chen</h3>
+                        <p class="specialty">Chief Neurologist</p>
+                        <p class="experience">18+ years experience</p>
+                        <p class="education">MD from Stanford Medical School</p>
+                        <p>Expert in brain disorders and epilepsy treatment with groundbreaking research in neuroscience.</p>
+                        <div class="doctor-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text">4.8 (98 reviews)</span>
+                        </div>
+                        <button class="book-doctor-btn" onclick="openBookingModal('neurology', 'Dr. Michael Chen')">Book Appointment</button>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <div class="placeholder-img">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="doctor-overlay">
+                            <button class="view-profile-btn">View Profile</button>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Emily Rodriguez</h3>
+                        <p class="specialty">Chief Pediatrician</p>
+                        <p class="experience">14+ years experience</p>
+                        <p class="education">MD from Boston University</p>
+                        <p>Dedicated to providing comprehensive care for children with expertise in child development.</p>
+                        <div class="doctor-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text">4.9 (145 reviews)</span>
+                        </div>
+                        <button class="book-doctor-btn" onclick="openBookingModal('pediatrics', 'Dr. Emily Rodriguez')">Book Appointment</button>
+                    </div>
+                </div>
+            </div>
+            <div class="doctors-cta">
+                <p>Looking for a specific specialist?</p>
+                <button class="btn-primary" onclick="openBookingModal()">Find Your Doctor</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About MediCare Hospital</h2>
+                    <p class="about-intro">For over 25 years, MediCare Hospital has been at the forefront of medical excellence, providing compassionate healthcare services to our community.</p>
+                    <p>Our state-of-the-art facility houses the latest medical technology and equipment, ensuring that our patients receive the highest quality care. We believe in treating not just the illness, but the whole person, with dignity, respect, and compassion.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-award"></i>
+                            <div>
+                                <h4>Award-Winning Care</h4>
+                                <p>Recognized for excellence in patient care and medical innovation</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-microscope"></i>
+                            <div>
+                                <h4>Advanced Technology</h4>
+                                <p>State-of-the-art medical equipment and cutting-edge treatment methods</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-hands-helping"></i>
+                            <div>
+                                <h4>Compassionate Care</h4>
+                                <p>Patient-centered approach with personalized treatment plans</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <i class="fas fa-calendar-alt"></i>
+                            <h3>25+</h3>
+                            <p>Years of Excellence</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-user-md"></i>
+                            <h3>500+</h3>
+                            <p>Expert Doctors</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-users"></i>
+                            <h3>100,000+</h3>
+                            <p>Patients Served</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-hospital"></i>
+                            <h3>50+</h3>
+                            <p>Specializations</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <div class="image-overlay">
+                        <div class="play-button" onclick="playVideo()">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <p>Watch Our Story</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mission-vision">
+                <div class="mission">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Our Mission</h3>
+                    <p>To provide exceptional healthcare services that improve the health and well-being of our community through compassionate care, medical excellence, and innovative treatment approaches.</p>
+                </div>
+                <div class="vision">
+                    <i class="fas fa-eye"></i>
+                    <h3>Our Vision</h3>
+                    <p>To be the leading healthcare provider in the region, recognized for our commitment to patient care, medical innovation, and community health improvement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Patients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p>"The care I received at MediCare was exceptional. The staff was professional, caring, and made me feel comfortable throughout my treatment."</p>
+                        <div class="patient-info">
+                            <div class="patient-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="patient-details">
+                                <h4>John Smith</h4>
+                                <p>Cardiology Patient</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p>"Dr. Rodriguez and her team provided wonderful care for my daughter. The pediatric department is truly child-friendly and professional."</p>
+                        <div class="patient-info">
+                            <div class="patient-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="patient-details">
+                                <h4>Maria Garcia</h4>
+                                <p>Pediatrics Patient</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p>"The neurology team helped me through a difficult diagnosis. Their expertise and compassion made all the difference in my recovery."</p>
+                        <div class="patient-info">
+                            <div class="patient-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="patient-details">
+                                <h4>David Wilson</h4>
+                                <p>Neurology Patient</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">We're here to help. Contact us for appointments, information, or emergencies.</p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Visit Us</h3>
+                            <p>123 Healthcare Avenue<br>
+                            Medical District<br>
+                            New York, NY 10001</p>
+                            <a href="#" class="contact-link">Get Directions</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Call Us</h3>
+                            <p><strong>Main:</strong> +1 (555) 123-4567<br>
+                            <strong>Emergency:</strong> +1 (555) 911-0000<br>
+                            <strong>Appointments:</strong> +1 (555) 123-BOOK</p>
+                            <a href="tel:+15551234567" class="contact-link">Call Now</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email Us</h3>
+                            <p><strong>General:</strong> info@medicare-hospital.com<br>
+                            <strong>Appointments:</strong> appointments@medicare-hospital.com<br>
+                            <strong>Support:</strong> support@medicare-hospital.com</p>
+                            <a href="mailto:info@medicare-hospital.com" class="contact-link">Send Email</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Operating Hours</h3>
+                            <p><strong>General Services:</strong><br>
+                            Monday - Friday: 8:00 AM - 8:00 PM<br>
+                            Saturday: 9:00 AM - 6:00 PM<br>
+                            Sunday: 10:00 AM - 4:00 PM<br>
+                            <strong>Emergency:</strong> 24/7</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-section">
+                    <div class="form-container">
+                        <h3>Send us a Message</h3>
+                        <p>Have a question or need assistance? Fill out the form below and we'll get back to you as soon as possible.</p>
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contactName">Full Name *</label>
+                                    <input type="text" id="contactName" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactEmail">Email Address *</label>
+                                    <input type="email" id="contactEmail" name="email" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contactPhone">Phone Number</label>
+                                    <input type="tel" id="contactPhone" name="phone">
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactSubject">Subject *</label>
+                                    <select id="contactSubject" name="subject" required>
+                                        <option value="">Select Subject</option>
+                                        <option value="appointment">Appointment Inquiry</option>
+                                        <option value="billing">Billing Question</option>
+                                        <option value="medical">Medical Records</option>
+                                        <option value="feedback">Feedback</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactMessage">Message *</label>
+                                <textarea id="contactMessage" name="message" rows="5" placeholder="Please describe how we can help you..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Map Section -->
+            <div class="map-section">
+                <h3>Find Our Location</h3>
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h4>Interactive Map</h4>
+                        <p>123 Healthcare Avenue, Medical District, NY 10001</p>
+                        <button class="map-btn">View on Google Maps</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Book Appointment</h2>
+                <span class="close" onclick="closeBookingModal()">&times;</span>
+            </div>
+            <form id="bookingForm" class="booking-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="patientName">Full Name *</label>
+                        <input type="text" id="patientName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="patientEmail">Email *</label>
+                        <input type="email" id="patientEmail" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="patientPhone">Phone Number *</label>
+                        <input type="tel" id="patientPhone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="patientAge">Age *</label>
+                        <input type="number" id="patientAge" min="1" max="120" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="department">Department *</label>
+                        <select id="department" required onchange="updateDoctors()">
+                            <option value="">Select Department</option>
+                            <option value="cardiology">Cardiology</option>
+                            <option value="neurology">Neurology</option>
+                            <option value="orthopedics">Orthopedics</option>
+                            <option value="ophthalmology">Ophthalmology</option>
+                            <option value="pediatrics">Pediatrics</option>
+                            <option value="general">General Medicine</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="doctor">Preferred Doctor *</label>
+                        <select id="doctor" required>
+                            <option value="">Select Doctor</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="appointmentDate">Preferred Date *</label>
+                        <input type="date" id="appointmentDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointmentTime">Preferred Time *</label>
+                        <select id="appointmentTime" required>
+                            <option value="">Select Time</option>
+                            <option value="09:00">09:00 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="14:00">02:00 PM</option>
+                            <option value="15:00">03:00 PM</option>
+                            <option value="16:00">04:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="symptoms">Symptoms/Reason for Visit</label>
+                    <textarea id="symptoms" placeholder="Please describe your symptoms or reason for the appointment"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" onclick="closeBookingModal()">Cancel</button>
+                    <button type="submit" class="btn-primary">Book Appointment</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content success-modal">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Appointment Booked Successfully!</h2>
+            <p>Your appointment has been scheduled. You will receive a confirmation email shortly.</p>
+            <div id="appointmentDetails"></div>
+            <button class="btn-primary" onclick="closeSuccessModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>MediCare</span>
+                    </div>
+                    <p>Providing exceptional healthcare services with compassion and excellence for over 25 years. Your health is our priority.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#doctors">Doctors</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Medical Services</h3>
+                    <ul>
+                        <li><a href="cardiology.html">Cardiology</a></li>
+                        <li><a href="neurology.html">Neurology</a></li>
+                        <li><a href="orthopedics.html">Orthopedics</a></li>
+                        <li><a href="ophthalmology.html">Ophthalmology</a></li>
+                        <li><a href="pediatrics.html">Pediatrics</a></li>
+                        <li><a href="general-medicine.html">General Medicine</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Healthcare Avenue, NY 10001</p>
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> info@medicare-hospital.com</p>
+                        <p><i class="fas fa-clock"></i> 24/7 Emergency Services</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 MediCare Hospital. All rights reserved.</p>
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

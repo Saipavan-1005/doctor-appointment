@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pediatrics Department - MediCare Hospital</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="department.css">
+    <script src="script2.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>MediCare</span>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#services" class="nav-link">Services</a></li>
+                    <li><a href="index.html#doctors" class="nav-link">Doctors</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="book-btn" onclick="openBookingModal()">Book Appointment</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Department Hero -->
+    <section class="dept-hero pediatrics-hero">
+        <div class="container">
+            <div class="dept-hero-content">
+                <div class="dept-info">
+                    <h1><i class="fas fa-child"></i> Pediatrics Department</h1>
+                    <p>Our Pediatrics Department provides comprehensive healthcare services for infants, children, and adolescents. We offer specialized care in a child-friendly environment with experienced pediatricians and modern facilities.</p>
+                    <div class="dept-stats">
+                        <div class="stat-item">
+                            <h3>8000+</h3>
+                            <p>Children Treated</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>98%</h3>
+                            <p>Parent Satisfaction</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>24/7</h3>
+                            <p>Emergency Care</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Offered -->
+    <section class="dept-services">
+        <div class="container">
+            <h2>Pediatric Services</h2>
+            <div class="services-list">
+                <div class="service-item">
+                    <i class="fas fa-baby"></i>
+                    <div>
+                        <h3>Newborn Care</h3>
+                        <p>Comprehensive care for newborns including screenings and vaccinations</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-syringe"></i>
+                    <div>
+                        <h3>Vaccination Programs</h3>
+                        <p>Complete immunization schedules and travel vaccinations</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-chart-line"></i>
+                    <div>
+                        <h3>Growth Monitoring</h3>
+                        <p>Regular check-ups and developmental milestone assessments</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-lungs"></i>
+                    <div>
+                        <h3>Respiratory Care</h3>
+                        <p>Treatment of asthma, allergies, and respiratory infections</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-heart"></i>
+                    <div>
+                        <h3>Pediatric Cardiology</h3>
+                        <p>Heart condition diagnosis and treatment for children</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-brain"></i>
+                    <div>
+                        <h3>Developmental Care</h3>
+                        <p>Assessment and support for developmental delays</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Department Doctors -->
+    <section class="dept-doctors">
+        <div class="container">
+            <h2>Our Pediatric Specialists</h2>
+            <div class="doctors-grid">
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <div class="placeholder-img">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                    </div>
+                    <h3>Dr. Emily Rodriguez</h3>
+                    <p class="specialty">Chief Pediatrician</p>
+                    <p class="experience">14+ Years Experience</p>
+                    <p>MD from Boston University. Expert in general pediatrics and child development.</p>
+                    <div class="doctor-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>4.9</span>
+                    </div>
+                    <button class="book-doctor-btn" onclick="openBookingModal('pediatrics', 'Dr. Emily Rodriguez')">Book Appointment</button>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <div class="placeholder-img">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                    </div>
+                    <h3>Dr. Kevin Park</h3>
+                    <p class="specialty">Pediatric Surgeon</p>
+                    <p class="experience">11+ Years Experience</p>
+                    <p>MD from Northwestern University. Expert in pediatric surgery and minimally invasive procedures.</p>
+                    <div class="doctor-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                    </div>
+                    <button class="book-doctor-btn" onclick="openBookingModal('pediatrics', 'Dr. Kevin Park')">Book Appointment</button>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <div class="placeholder-img">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                    </div>
+                    <h3>Dr. Amy Wilson</h3>
+                    <p class="specialty">Neonatologist</p>
+                    <p class="experience">13+ Years Experience</p>
+                    <p>MD from Vanderbilt University. Expert in newborn care and NICU management.</p>
+                    <div class="doctor-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>4.9</span>
+                    </div>
+                    <button class="book-doctor-btn" onclick="openBookingModal('pediatrics', 'Dr. Amy Wilson')">Book Appointment</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment & Technology -->
+    <section class="dept-equipment">
+        <div class="container">
+            <h2>Child-Friendly Facilities</h2>
+            <div class="equipment-grid">
+                <div class="equipment-item">
+                    <i class="fas fa-gamepad"></i>
+                    <h3>Play Areas</h3>
+                    <p>Interactive play zones to keep children comfortable and entertained</p>
+                </div>
+                <div class="equipment-item">
+                    <i class="fas fa-baby"></i>
+                    <h3>NICU</h3>
+                    <p>State-of-the-art neonatal intensive care unit for premature babies</p>
+                </div>
+                <div class="equipment-item">
+                    <i class="fas fa-microscope"></i>
+                    <h3>Pediatric Lab</h3>
+                    <p>Specialized laboratory services designed for children</p>
+                </div>
+                <div class="equipment-item">
+                    <i class="fas fa-x-ray"></i>
+                    <h3>Child-Safe Imaging</h3>
+                    <p>Low-radiation imaging equipment specifically for pediatric use</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Include Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Book Pediatrics Appointment</h2>
+                <span class="close" onclick="closeBookingModal()">&times;</span>
+            </div>
+            <form id="bookingForm" class="booking-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="patientName">Child's Full Name *</label>
+                        <input type="text" id="patientName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="patientEmail">Parent's Email *</label>
+                        <input type="email" id="patientEmail" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="patientPhone">Phone Number *</label>
+                        <input type="tel" id="patientPhone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="patientAge">Child's Age *</label>
+                        <input type="number" id="patientAge" min="0" max="18" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="department">Department *</label>
+                        <select id="department" required>
+                            <option value="pediatrics" selected>Pediatrics</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="doctor">Preferred Doctor *</label>
+                        <select id="doctor" required>
+                            <option value="">Select Doctor</option>
+                            <option value="Dr. Emily Rodriguez">Dr. Emily Rodriguez - Chief Pediatrician</option>
+                            <option value="Dr. Kevin Park">Dr. Kevin Park - Pediatric Surgeon</option>
+                            <option value="Dr. Amy Wilson">Dr. Amy Wilson - Neonatologist</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="appointmentDate">Preferred Date *</label>
+                        <input type="date" id="appointmentDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointmentTime">Preferred Time *</label>
+                        <select id="appointmentTime" required>
+                            <option value="">Select Time</option>
+                            <option value="09:00">09:00 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="14:00">02:00 PM</option>
+                            <option value="15:00">03:00 PM</option>
+                            <option value="16:00">04:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="symptoms">Symptoms/Reason for Visit</label>
+                    <textarea id="symptoms" placeholder="Please describe your child's symptoms or reason for the appointment"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" onclick="closeBookingModal()">Cancel</button>
+                    <button type="submit" class="btn-primary">Book Appointment</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content success-modal">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Appointment Booked Successfully!</h2>
+            <p>Your pediatrics appointment has been scheduled. You will receive a confirmation email shortly.</p>
+            <div id="appointmentDetails"></div>
+            <button class="btn-primary" onclick="closeSuccessModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>MediCare</span>
+                    </div>
+                    <p>Providing exceptional healthcare services with compassion and excellence.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#doctors">Doctors</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MediCare Hospital. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

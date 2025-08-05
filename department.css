@@ -1,0 +1,313 @@
+/* Department Page Specific Styles */
+.dept-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 120px 20px 80px;
+    margin-top: 80px;
+}
+
+.dept-hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.dept-info h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.dept-info h1 i {
+    color: #e53e3e;
+    font-size: 3.5rem;
+}
+
+.dept-info p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    opacity: 0.9;
+}
+
+.dept-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 2.5rem;
+    color: #e53e3e;
+    margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Department Services */
+.dept-services {
+    padding: 80px 20px;
+    background: #f7fafc;
+}
+
+.dept-services h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #2c5282;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+.service-item i {
+    font-size: 2.5rem;
+    color: #e53e3e;
+    margin-top: 0.5rem;
+}
+
+.service-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #2c5282;
+}
+
+.service-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Department Doctors */
+.dept-doctors {
+    padding: 80px 20px;
+}
+
+.dept-doctors h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #2c5282;
+}
+
+.dept-doctors .doctors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dept-doctors .doctor-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.dept-doctors .doctor-card:hover {
+    transform: translateY(-10px);
+}
+
+.experience {
+    color: #e53e3e;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.book-doctor-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin-top: 1rem;
+}
+
+.book-doctor-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Equipment Section */
+.dept-equipment {
+    padding: 80px 20px;
+    background: #f7fafc;
+}
+
+.dept-equipment h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #2c5282;
+}
+
+.equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.equipment-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.equipment-item:hover {
+    transform: translateY(-5px);
+}
+
+.equipment-item i {
+    font-size: 3rem;
+    color: #e53e3e;
+    margin-bottom: 1.5rem;
+}
+
+.equipment-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #2c5282;
+}
+
+.equipment-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Additional Styles for Service Cards */
+.service-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin-top: 1rem;
+}
+
+.service-btn:hover {
+    transform: translateY(-2px);
+}
+
+.service-card {
+    cursor: pointer;
+    position: relative;
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    padding: 1rem 0;
+    min-width: 200px;
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    list-style: none;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background: #f7fafc;
+    color: #2c5282;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dept-info h1 {
+        font-size: 2rem;
+        flex-direction: column;
+    }
+    
+    .dept-info h1 i {
+        font-size: 2.5rem;
+    }
+    
+    .dept-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .services-list,
+    .equipment-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .dropdown-menu {
+        position: static;
+        display: none;
+        box-shadow: none;
+        background: #f7fafc;
+        margin-top: 0.5rem;
+    }
+}
